@@ -3,7 +3,7 @@ import React from 'react';
 const Card = () => {
   return (
       <div >
-          <div>Image</div>
+          <div><img width="100%" src="app/images/Gallery/Barcelona-and-Tenerife/Arc-de-Triomf,-Barcelona,-Spain_Liliya-Karakoleva.JPG"></img></div>
           <div>
               <div>Barcelona & Tenerife</div>
               <div>

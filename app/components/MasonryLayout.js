@@ -4,8 +4,7 @@ import Card from './Card';
 const destinations = [
     {id: 1, name: "Barcelona"},
     {id: 2, name: "New york"},
-    {id: 3, name: "Warsaw"},
-    {id: 4, name: "Dubai"},
+    {id: 3, name: "Warsaw"}
 ]
 
 console.log(destinations);

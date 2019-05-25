@@ -14,7 +14,7 @@ p, span, h1, h2, h3, h4, h5, h6 {
 }
 
 html, body {
-  height: 100vh;
+  height: 100%;
 }
 
 /* Flex For Sidebar and Content Area */
@@ -184,13 +184,32 @@ button:hover {
 
 /* MASONRY */
 
+
 .masonry {
   display: flex;
   flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
 }
 
 .card-container {
-  display: flex;
-  width: 320px;
-  height: 200px;
+  margin-top: 20px;
+  width: 28vw;
+  border: 1px solid black;
 }
+
+@media only screen and (max-width: 768px) {
+  .masonry {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .card-container {
+    margin-top: 20px;
+    margin-left: 10vw;
+    width: 80vw;
+  }
+}
+
