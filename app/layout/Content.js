@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 /* View Components */
 import Home from '../components/Home';
 import Destinations from '../components/Destinations';
+import DestinationsPage from '../components/DestinationsPage';
 import Contact from '../components/Contact';
 import TopNav from './Topnav';
 
@@ -17,6 +18,7 @@ const Content = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/destinations" component={Destinations} />
+          <Route exact path="/destinations/:id" component={DestinationsPage} />
           <Route exact path="/contact" component={Contact} />
           <Route render={() => <h2 className="four-o-four">404 Page Not Found</h2>} />
         </Switch>

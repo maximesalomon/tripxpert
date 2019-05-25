@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import MasonryLayout from './MasonryLayout';
 
 /* KendoReact Components and CSS */
@@ -34,7 +36,7 @@ const Home = () => {
                 <AutoComplete data={destinations} placeholder="Destinations" />
               </div>
               <div className="col-2">
-                <Button primary={true}>Search</Button>
+                <Link to="/destinations"><Button primary={true}>Search</Button></Link>
               </div>
             </div>
           </div>
