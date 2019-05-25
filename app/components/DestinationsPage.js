@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import DestinationInfos from './DestinationInfos';
@@ -11,24 +11,19 @@ import '@progress/kendo-react-popup'
 import '@progress/kendo-date-math'
 import '@progress/kendo-react-dropdowns'
 
-const destinations = [
-  { id: 1, name: "Barcelona & Tenerife", cities: ["Barcelona", "Teneriffe", "Santa Cruz", "Teide"], fromPrice: 700 },
-  { id: 2, name: "New york & East Coast", cities: ["Boston", "Niagara Falls", "NYC", "Florida"], fromPrice: 2100 },
-  { id: 3, name: "Malta & Mediterranean", cities: ["Valetta", "Birgu", "Mdina", "Gozo"], fromPrice: 1200 }
-]
-
-const DestinationsPage = () => {
-  document.title = `TripXpert Destinations`;
-  return (
-    <>
-      <DestinationsHeader>
-        <DatePickerContainer>
-          <DateRangePicker />
-        </DatePickerContainer>
-      </DestinationsHeader>
-      <DestinationInfos/>
-    </>
-  )
+class DestinationsPage extends Component {
+  render() {
+    return (
+      <>
+        <DestinationsHeader>
+          <DatePickerContainer>
+            <DateRangePicker />
+          </DatePickerContainer>
+        </DestinationsHeader>
+        <DestinationInfos id={this.props.match.params.id}/>
+      </>
+    )
+  }
 }
 
 const DestinationsHeader = styled.div`

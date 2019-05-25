@@ -6,7 +6,7 @@ const Card = ({destination}) => {
     const link = `/destinations/${destination.id}`
   return (
       <CardHover>
-          <div><img width="100%" src="app/images/Gallery/Barcelona-and-Tenerife/Arc-de-Triomf,-Barcelona,-Spain_Liliya-Karakoleva.JPG"></img></div>
+          <div><img width="100%" src={destination.photo}></img></div>
           <div class="card-infos-container">
               <p class="card-destinations">{destination.name}</p>
               <div class="card-destinations-more">

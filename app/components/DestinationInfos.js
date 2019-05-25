@@ -1,16 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import queryString from 'query-string';
 import DestinationTabs from './DestinationTabs';
 
-const DestinationInfos = () => {
-  document.title = `TripXpert Destinations`;
+const destinations = [
+  { id: 1, name: "Barcelona & Tenerife", photo: "app/images/Gallery/Barcelona-and-Tenerife/Arc-de-Triomf,-Barcelona,-Spain_Liliya-Karakoleva.JPG", cities: ["Barcelona", "Teneriffe", "Santa Cruz", "Teide"], fromPrice: 700 },
+  { id: 2, name: "New york & East Coast", photo: "app/images/Gallery/New-York-City/Brooklyn-Bridge_Pavlina-Hadjieva_Attraction.JPG", cities: ["Boston", "Niagara Falls", "NYC", "Florida"], fromPrice: 2100 },
+  { id: 3, name: "Malta & Mediterranean", photo: "app/images/Gallery/Malta/Bibliotheca-National-Library_Marie-Lan-Nguyen.JPG",cities: ["Valetta", "Birgu", "Mdina", "Gozo"], fromPrice: 1200 }
+]
+
+const DestinationInfos = () => { 
   return (
     <DestinationInfosContainer>
         <h1>Barcelona & Tenerife</h1>
         <DestinationInfosCities>Los Gigantes - Casa Mila - Casa Batlo</DestinationInfosCities>
         <Line>-------------------</Line>
-        <DestinationInfosPricing>From $700 fro 5 days</DestinationInfosPricing>
+        <DestinationInfosPricing>From $700 for 5 days</DestinationInfosPricing>
         <DestinationInfosView>View full price info</DestinationInfosView>
         <DestinationTabs/>
     </DestinationInfosContainer>
