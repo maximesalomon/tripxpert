@@ -107,10 +107,6 @@ main section {
 .wrapper.sm .tx-search-md { display: none; }
 .wrapper.md .tx-search-md { display: auto; }
 
-.masonry-grid {
-  margin: 2em;
-}
-
 /* Utility Styles */
 h1 {
   margin: 0;
@@ -184,4 +180,17 @@ button:hover {
   -o-transition: opacity 0.15s ease-in-out;
   transition: opacity 0.15s ease-in-out;
   opacity: 0.5;
+}
+
+/* MASONRY */
+
+.masonry {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-container {
+  display: flex;
+  width: 320px;
+  height: 200px;
 }

@@ -1,61 +1,25 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import Card from './Card';
 
-const MasonryLayout = props => {
-  const columnWrapper = {};
-  const result = [];
+const destinations = [
+    {id: 1, name: "Barcelona"},
+    {id: 2, name: "New york"},
+    {id: 3, name: "Warsaw"},
+    {id: 4, name: "Dubai"},
+]
 
-  // create columns
-  for (let i = 0; i < props.columns; i++) {
-    columnWrapper[`column${i}`] = [];
-  }
+console.log(destinations);
 
-  // divide children into columns
-  for (let i = 0; i < props.children.length; i++) {
-    const columnIndex = i % props.columns;
-    columnWrapper[`column${columnIndex}`].push(
-      <div key={`tile-${i}`} style={{
-          marginBottom: `${props.gap}px`, backgroundColor: '#fff'
-        }}>
-        {props.children[i]}
-      </div>
-    );
-  }
-
-  // create individual tiles
-  for (let i = 0; i < props.columns; i++) {
-    result.push(
-      <div key={`col-${i}`} 
-          style={{
-            marginLeft: `${i > 0 ? props.gap : 0}px`,
-            flex: 1
-          }
-        }>
-        {columnWrapper[`column${i}`]}
-      </div>
-    );
-  }
-
+const MasonryLayout = () => {
   return (
-    <div style={{ display: 'flex' }}>
-      {result}
-    </div>
-  );
-
+        destinations && destinations.map(d => {
+            return (
+                <div class="card-container">
+                    <Card key={d.id} d={d}/>
+                </div>
+            )
+        })
+    )
 }
 
-MasonryLayout.propTypes = {
-  columns: PropTypes.number.isRequired,
-  gap: PropTypes.number.isRequired,
-  children: PropTypes.arrayOf(PropTypes.element),
-};
-MasonryLayout.defaultProps = { columns: 2, gap: 20, };
-
 export default MasonryLayout;
-
-/*
-  More information on this masonry layout component for React can be found here:
-  https://medium.com/the-andela-way/how-to-create-a-masonry-layout-component-using-react-f30ec9ca5e99
-  https://codepen.io/john555/pen/GYoyNd and https://masonry.desandro.com/layout.html
-  as well https://imagesloaded.desandro.com/#webpack if we add images
-*/

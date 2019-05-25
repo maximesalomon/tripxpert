@@ -17,7 +17,7 @@ const Destinations = () => {
             [...Array(9).keys()].map(key => {
               const height = 200 + Math.random() * 200;
               return (
-                <div key={key} style={{ height: `${height}px` }} />
+                  <div key={key} style={{ height: `${height}px` }} />
               )
             })
           }
