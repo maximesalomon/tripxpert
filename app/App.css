@@ -192,6 +192,10 @@ button:hover {
   justify-content: space-between;
 }
 
+.destinations {
+  padding-top: 40px;
+}
+
 .card-container {
   margin-top: 16px;
   margin-bottom: 100px;
@@ -231,9 +235,9 @@ button:hover {
     margin: 0 auto;
   }
   .card-container {
-    margin-top: 20px;
     margin-left: 10vw;
     width: 80vw;
+    margin-bottom: 32px;
   }
 }
 
