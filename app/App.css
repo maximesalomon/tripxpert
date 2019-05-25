@@ -1,7 +1,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   color: #333;
-  background: rgb(255,255,255);
+  background: lightgray;
 }
 p, span, h1, h2, h3, h4, h5, h6 {
   color: #222;
@@ -184,19 +184,43 @@ button:hover {
 
 /* MASONRY */
 
-
 .masonry {
   display: flex;
   flex-wrap: wrap;
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   justify-content: space-between;
 }
 
 .card-container {
-  margin-top: 20px;
-  width: 28vw;
-  border: 1px solid black;
+  margin-top: 16px;
+  margin-bottom: 100px;
+  width: 24vw;
+  background: white;
+}
+
+.card-infos-container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-destinations {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+  color: rgb(33, 37, 41);
+}
+
+.card-destinations-more {
+  display: flex;
+}
+
+.card-destinations-city {
+  font-size: 12px;
+  font-weight: lighter;
+  margin-right: 4px;
+  color: gray;
 }
 
 @media only screen and (max-width: 768px) {
